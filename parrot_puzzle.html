@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parrot Puzzle Game</title>
+    <link rel="stylesheet" href="parrot_puzzle.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Parrot Memory Puzzle</h1>
+        <div class="stats">
+            <div>Moves: <span id="moves">0</span></div>
+            <div>Matches: <span id="matches">0</span>/8</div>
+            <div>Time: <span id="time">00:00</span></div>
+        </div>
+        <div class="game-board" id="game-board">
+            <!-- Cards will be generated here -->
+        </div>
+        <div class="controls">
+            <button id="reset-btn">Reset Game</button>
+        </div>
+        <div id="win-message" class="win-message" style="display: none;">
+            <h2>Congratulations!</h2>
+            <p>You completed the puzzle in <span id="final-moves"></span> moves and <span id="final-time"></span>!</p>
+            <button id="play-again-btn">Play Again</button>
+        </div>
+    </div>
+    <script src="parrot_puzzle.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Quiz App</title>
+    <link rel="stylesheet" href="master_quiz.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Master Quiz</h1>
+        <div class="quiz-info">
+            <div class="timer">Time Left: <span id="time-left">30</span>s</div>
+            <div class="score">Score: <span id="score">0</span></div>
+            <div class="question-number">Question <span id="question-num">1</span> of <span id="total-questions">20</span></div>
+        </div>
+        <div id="question-container">
+            <h2 id="question-text"></h2>
+            <div class="options" id="options">
+                <!-- Options will be loaded here -->
+            </div>
+        </div>
+        <button id="next-btn" style="display: none;">Next Question</button>
+        <div id="result" style="display: none;">
+            <h2>Quiz Completed!</h2>
+            <p>Your final score: <span id="final-score"></span></p>
+            <p>Time taken: <span id="total-time"></span></p>
+            <button id="restart-btn">Restart Quiz</button>
+        </div>
+    </div>
+    <script src="master_quiz.js"></script>
+</body>
+</html>

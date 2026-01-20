@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover South Korea | Modern Experience</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- CSS STYLES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo { font-weight: 800; font-size: 1.5rem; color: #d32f2f; }
+
+        .nav-links { display: flex; list-style: none; }
+        .nav-links li { margin-left: 20px; }
+        .nav-links a { text-decoration: none; color: #333; font-weight: 400; transition: 0.3s; }
+        .nav-links a:hover { color: #d32f2f; }
+
+        /* Common Section Styling */
+        section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 80px 20px;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            max-width: 800px;
+        }
+
+        h2 { font-size: 3rem; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px; }
+        p { font-size: 1.1rem; line-height: 1.6; }
+
+        /* Specific Backgrounds (Korean Themed) */
+        #home { background-image: url('https://images.unsplash.com/photo-1517154421773-0529f29ea451?q=80&w=2070'); }
+        #seoul { background-image: url('https://images.unsplash.com/photo-1538481199705-c710c4e965fc?q=80&w=2065'); }
+        #culture { background-image: url('https://images.unsplash.com/photo-1547823645-592743755410?q=80&w=2070'); }
+        #food { background-image: url('https://images.unsplash.com/photo-1498654896293-37aacf113fd9?q=80&w=2070'); }
+        #nature { background-image: url('https://images.unsplash.com/photo-1596402184320-417d7178b2cd?q=80&w=2070'); }
+        #history { background-image: url('https://images.unsplash.com/photo-1621503927230-6ca238210332?q=80&w=1974'); }
+        #technology { background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070'); }
+        #kpop { background-image: url('https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?q=80&w=2070'); }
+        #busan { background-image: url('https://images.unsplash.com/photo-1570191913384-63300898495f?q=80&w=2070'); }
+        #contact { background-image: url('https://images.unsplash.com/photo-1533130061792-64b345e4a833?q=80&w=2070'); }
+
+        /* Animation */
+        .reveal { opacity: 0; transform: translateY(50px); transition: 1s all ease; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 30px;
+            background: #d32f2f;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+        .btn:hover { background: #b71c1c; transform: scale(1.05); }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">KOREA VIBES</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#seoul">Seoul</a></li>
+            <li><a href="#food">Cuisine</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>WELCOME TO SOUTH KOREA</h1>
+            <p>Experience the blend of ancient traditions and futuristic technology.</p>
+            <a href="#seoul" class="btn">Explore Now</a>
+        </div>
+    </section>
+
+    <section id="seoul">
+        <div class="overlay"></div>
+        <div class="content reveal">
+            <h2>The Heart of Seoul</h2>
+            <p>A city that never sleeps, where skyscrapers meet ancient palaces.</p>
+        </div>
+    </section>
+
+    <section id="culture">
+        <div class="overlay"></div>
+        <div class="content reveal">
+            <h2>Rich Heritage</h2>
+            <p>From Hanbok to traditional tea ceremonies, Korean culture is timeless.</p>
+        </div>
+    </section>
+
+    <section id="food">
+        <div class="overlay"></div>
+        <div class="content reveal">
+            <h2>Korean Cuisine</h2>
+            <p>Spicy Kimchi, delicious Bibimbap, and the world-famous Korean BBQ.</p>
+        </div>
+    </section>
+
+    <section id="nature">
+        <div class="overlay"></div>
+        <div class="content reveal">
+            <h2>Breathtaking Nature</h2>
+            <p>Serene mountains and beautiful cherry blossoms in every corner.</p>
+        </div>
+    </section>
+
+    <section id="history">
+        <div class="overlay"></div>
+        <div class="content reveal">
+            <h2>Ancient History</h2>
+            <p>Walk through the Gyeongbokgung Palace and feel the Joseon Dynasty.</p>
+        </div>
+    </section>
+
+    <section id="technology">
+        <div class="overlay"></div>
+        <div class="content reveal">
+            <h2>Tech Giant</h2>
+            <p>The global leader in innovation, smart cities, and high-speed connectivity.</p>
+        </div>
+    </section>
+
+    <section id="kpop">
+        <div class="overlay"></div>
+        <div class="content reveal">
+            <h2>K-Wave Phenomenon</h2>
+            <p>Global music, dramas, and entertainment that conquered the world.</p>
+        </div>
+    </section>
+
+    <section id="busan">
+        <div class="overlay"></div>
+        <div class="content reveal">
+            <h2>Coastal Beauty</h2>
+            <p>Visit Busan for its stunning beaches and vibrant fish markets.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="overlay"></div>
+        <div class="content reveal">
+            <h2>Join the Journey</h2>
+            <p>Ready to visit? Get in touch with us for more travel guides.</p>
+            <form style="margin-top: 20px;">
+                <input type="email" placeholder="Your Email" style="padding: 10px; width: 250px; border: none; border-radius: 5px;">
+                <button type="button" class="btn" style="border: none; cursor: pointer;">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        // Scroll Reveal Animation
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                } else {
+                    reveals[i].classList.remove("active");
+                }
+            }
+        }
+
+        window.addEventListener("scroll", reveal);
+
+        // Initial check
+        reveal();
+    </script>
+
+</body>
+</html>

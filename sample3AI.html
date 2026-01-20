@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduTech | Modern Learning</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1; /* Modern Indigo */
+            --secondary: #a855f7; /* Purple */
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+        }
+
+        /* --- Header & Nav --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo { font-size: 24px; font-weight: 700; color: var(--primary); }
+
+        .nav-links { display: flex; list-style: none; }
+        .nav-links li { margin-left: 30px; }
+        .nav-links a { 
+            text-decoration: none; 
+            color: var(--dark); 
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        .nav-links a:hover { color: var(--primary); }
+
+        /* --- Hero Section --- */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px 8%;
+            min-height: 90vh;
+            background: radial-gradient(circle at top right, #e0e7ff, transparent);
+        }
+
+        .hero-content { flex: 1; }
+        .hero-content h1 { font-size: 3.5rem; line-height: 1.2; margin-bottom: 20px; }
+        .hero-content h1 span { color: var(--primary); }
+        .hero-content p { font-size: 1.1rem; color: #64748b; margin-bottom: 30px; }
+
+        .cta-buttons .btn-primary {
+            padding: 15px 35px;
+            background: var(--gradient);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+            transition: 0.3s;
+        }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 25px rgba(99, 102, 241, 0.4); }
+
+        .hero-image { flex: 1; display: flex; justify-content: flex-end; }
+        .hero-image img { width: 90%; border-radius: 20px; box-shadow: 20px 20px 60px #d1d9e6; }
+
+        /* --- Stats/Features --- */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 50px 8%;
+            background: var(--white);
+        }
+        .stat-card {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-bottom: 4px solid var(--primary);
+        }
+
+        /* --- Course Cards --- */
+        .courses { padding: 80px 8%; }
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .grid-courses {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: 0.4s;
+        }
+        .card:hover { transform: scale(1.03); }
+        .card-img { height: 200px; background: #ddd; width: 100%; object-fit: cover; }
+        .card-body { padding: 25px; }
+        .tag { 
+            background: #e0e7ff; color: var(--primary); 
+            padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: bold;
+        }
+        .card-body h3 { margin: 15px 0 10px; }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 8% 20px;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero { flex-direction: column; text-align: center; }
+            .hero-image { display: none; }
+            .hero-content h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Edu<span>Tech</span></div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#">Mentors</a></li>
+            <li><a href="#">Pricing</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Unlock Your Potential with <span>Online Learning</span></h1>
+            <p>Duniya ke behtareen teachers se seekhein. Aaj hi apni journey shuru karein aur apne skills ko upgrade karein.</p>
+            <div class="cta-buttons">
+                <button class="btn-primary">Get Started For Free</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Learning">
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="stat-card"><h3>15k+</h3><p>Active Students</p></div>
+        <div class="stat-card"><h3>600+</h3><p>Online Courses</p></div>
+        <div class="stat-card"><h3>150+</h3><p>Expert Tutors</p></div>
+        <div class="stat-card"><h3>100%</h3><p>Satisfaction</p></div>
+    </section>
+
+    <section id="courses" class="courses">
+        <div class="section-title">
+            <h2>Recommended Courses</h2>
+            <p>Choose what suits your career goals</p>
+        </div>
+        <div class="grid-courses">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?auto=format&fit=crop&w=500&q=80" class="card-img">
+                <div class="card-body">
+                    <span class="tag">Development</span>
+                    <h3>Full Stack Web Dev</h3>
+                    <p>MERN Stack seekhein zero se hero tak.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=500&q=80" class="card-img">
+                <div class="card-body">
+                    <span class="tag">Design</span>
+                    <h3>UI/UX Masterclass</h3>
+                    <p>Modern mobile aur web design ke basics.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1555949963-aa29a3a8d861?auto=format&fit=crop&w=500&q=80" class="card-img">
+                <div class="card-body">
+                    <span class="tag">Business</span>
+                    <h3>Digital Marketing</h3>
+                    <p>Social media aur SEO ki duniya mein kadam rakhein.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 EduTech Platform. Made with ❤️ for Students.</p>
+    </footer>
+
+</body>
+</html>

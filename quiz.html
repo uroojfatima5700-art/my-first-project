@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .quiz-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question h3 {
+            color: #555;
+        }
+        .options {
+            margin-left: 20px;
+        }
+        .option {
+            margin: 5px 0;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #results {
+            margin-top: 20px;
+            text-align: center;
+            display: none;
+        }
+        #results h2 {
+            color: #333;
+        }
+        #score {
+            font-size: 18px;
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>General Knowledge Quiz</h1>
+        <div id="quiz">
+            <div id="question-container">
+                <!-- Question will be loaded here -->
+            </div>
+        </div>
+        <button id="next-btn" onclick="nextQuestion()">Next</button>
+        <button id="submit-btn" onclick="submitQuiz()" style="display: none;">Submit Quiz</button>
+        <div id="results">
+            <h2>Results</h2>
+            <p id="score"></p>
+        </div>
+    </div>
+    <script>
+        const questions = [
+            {
+                question: "What is the capital of Pakistan?",
+                options: ["Karachi", "Lahore", "Islamabad", "Peshawar"],
+                answer: "Islamabad"
+            },
+            {
+                question: "Which is the largest planet in our solar system?",
+                options: ["Earth", "Jupiter", "Saturn", "Mars"],
+                answer: "Jupiter"
+            },
+            {
+                question: "What is 5 + 3?",
+                options: ["7", "8", "9", "10"],
+                answer: "8"
+            },
+            {
+                question: "Who painted the Mona Lisa?",
+                options: ["Vincent van Gogh", "Leonardo da Vinci", "Pablo Picasso", "Michelangelo"],
+                answer: "Leonardo da Vinci"
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        let userAnswers = [];
+
+        function loadQuestion() {
+            const questionContainer = document.getElementById('question-container');
+            const q = questions[currentQuestionIndex];
+            questionContainer.innerHTML = `
+                <div class="question">
+                    <h3>${currentQuestionIndex + 1}. ${q.question}</h3>
+                    <div class="options">
+                        ${q.options.map((option, index) => `
+                            <div class="option">
+                                <input type="radio" name="q${currentQuestionIndex}" value="${option}" id="opt${index}">
+                                <label for="opt${index}">${option}</label>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        function nextQuestion() {
+            const selected = document.querySelector(`input[name="q${currentQuestionIndex}"]:checked`);
+            if (selected) {
+                userAnswers[currentQuestionIndex] = selected.value;
+            } else {
+                userAnswers[currentQuestionIndex] = null; // No answer
+            }
+
+            currentQuestionIndex++;
+            if (currentQuestionIndex < questions.length) {
+                loadQuestion();
+            } else {
+                document.getElementById('next-btn').style.display = 'none';
+                document.getElementById('submit-btn').style.display = 'block';
+            }
+        }
+
+        function submitQuiz() {
+            let score = 0;
+            questions.forEach((q, index) => {
+                if (userAnswers[index] === q.answer) {
+                    score++;
+                }
+            });
+
+            document.getElementById('quiz').style.display = 'none';
+            document.getElementById('submit-btn').style.display = 'none';
+            document.getElementById('results').style.display = 'block';
+            document.getElementById('score').textContent = `You scored ${score} out of ${questions.length}`;
+        }
+
+        // Load the first question on page load
+        window.onload = loadQuestion;
+    </script>
+</body>
+</html>

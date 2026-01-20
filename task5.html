@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Multi-Section Website</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <style>
+        /* Custom CSS */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Hero Section with Background Image */
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: #0d6efd;
+            margin-bottom: 15px;
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: #212529;
+            color: white;
+            padding: 40px 0;
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: 0.6s all ease-out;
+        }
+
+        .appear {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="bi bi-rocket-takeoff-fill me-2"></i>MY BRAND</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section">
+        <div class="container">
+            <h1 class="display-2 fw-bold">Welcome to Our Digital Space</h1>
+            <p class="lead">We create beautiful websites with modern technologies.</p>
+            <a href="#about" class="btn btn-primary btn-lg mt-3">Learn More</a>
+        </div>
+    </section>
+
+    <section id="about" class="section-padding bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="img-fluid rounded shadow" alt="About Us">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="fw-bold">About Our Company</h2>
+                    <p class="mt-4 text-muted">Hum ek aisi team hain jo aapki vision ko reality mein badalti hai. Hamara maqsad high-quality web solutions provide karna hai jo aapke business ko grow karein.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-check-circle-fill text-primary"></i> Professional Designs</li>
+                        <li><i class="bi bi-check-circle-fill text-primary"></i> Fast Performance</li>
+                        <li><i class="bi bi-check-circle-fill text-primary"></i> 24/7 Support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section-padding">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-5">Our Services</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card p-4 border-0 shadow-sm h-100">
+                        <i class="bi bi-laptop service-icon"></i>
+                        <h4>Web Design</h4>
+                        <p>Modern aur attractive designs jo har device par fit hon.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card p-4 border-0 shadow-sm h-100">
+                        <i class="bi bi-code-slash service-icon"></i>
+                        <h4>Development</h4>
+                        <p>Clean code aur latest frameworks ka istemal.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card p-4 border-0 shadow-sm h-100">
+                        <i class="bi bi-graph-up-arrow service-icon"></i>
+                        <h4>SEO Marketing</h4>
+                        <p>Aapki website ko Google ke top results mein laane ke liye.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Our Gallery</h2>
+            <div class="row g-4">
+                <div class="col-md-4"><img src="https://picsum.photos/400/300?random=1" class="gallery-img" alt="Work 1"></div>
+                <div class="col-md-4"><img src="https://picsum.photos/400/300?random=2" class="gallery-img" alt="Work 2"></div>
+                <div class="col-md-4"><img src="https://picsum.photos/400/300?random=3" class="gallery-img" alt="Work 3"></div>
+                <div class="col-md-4"><img src="https://picsum.photos/400/300?random=4" class="gallery-img" alt="Work 4"></div>
+                <div class="col-md-4"><img src="https://picsum.photos/400/300?random=5" class="gallery-img" alt="Work 5"></div>
+                <div class="col-md-4"><img src="https://picsum.photos/400/300?random=6" class="gallery-img" alt="Work 6"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <h2 class="fw-bold mb-4">Contact Us</h2>
+                    <form id="contactForm" class="row g-3 text-start bg-white p-4 shadow rounded">
+                        <div class="col-md-6">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="4" required></textarea>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-primary px-5">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center">
+            <h3 class="mb-4">Follow Us</h3>
+            <div class="mb-4">
+                <a href="#" class="text-white mx-3 fs-4"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-white mx-3 fs-4"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-white mx-3 fs-4"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" class="text-white mx-3 fs-4"><i class="bi bi-linkedin"></i></a>
+            </div>
+            <hr>
+            <p class="mb-0">&copy; 2026 My Brand. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Form Submission JavaScript
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            alert('Shukriya ' + name + '! Aapka message humein mil gaya hai.');
+            this.reset();
+        });
+
+        // Simple Scroll Animation effect
+        window.addEventListener('scroll', function() {
+            let sections = document.querySelectorAll('.section-padding');
+            sections.forEach(sec => {
+                let top = window.scrollY;
+                let offset = sec.offsetTop - 400;
+                if(top >= offset) {
+                    sec.classList.add('appear');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

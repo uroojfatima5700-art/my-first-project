@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern 6-Section Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+/* 1. Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10%;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    z-index: 100;
+}
+
+.logo { font-weight: 700; font-size: 1.5rem; color: #333; }
+.logo span { color: #007bff; }
+.nav-links { display: flex; list-style: none; }
+.nav-links li { margin-left: 25px; }
+.nav-links a { text-decoration: none; color: #555; font-weight: 500; transition: 0.3s; }
+.nav-links a:hover { color: #007bff; }
+
+/* 2. Hero */
+.hero {
+    height: 80vh;
+    background: #0f172a;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 { font-size: 4rem; margin-bottom: 1rem; }
+.btn-main {
+    display: inline-block;
+    padding: 15px 35px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+/* 3. Services (Grid) */
+.services { padding: 100px 10%; text-align: center; background: #f8fafc; }
+.section-title { margin-bottom: 50px; font-size: 2.5rem; }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+.box {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    transition: 0.3s;
+}
+.box:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+
+/* 4. About */
+.about { padding: 100px 10%; background: white; text-align: center; }
+.about-container { max-width: 700px; margin: 0 auto; }
+
+/* 5. Pricing */
+.pricing { padding: 100px 10%; background: #f8fafc; text-align: center; }
+.price-grid { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.price-card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    width: 280px;
+    border: 1px solid #ddd;
+}
+.price-card.popular { border: 2px solid #007bff; transform: scale(1.05); }
+.amount { font-size: 2.5rem; font-weight: 700; margin: 20px 0; }
+.amount span { font-size: 1rem; color: #777; }
+.price-card ul { list-style: none; margin-bottom: 20px; color: #666; }
+
+/* 6. Footer & Contact */
+.footer { background: #0f172a; color: white; padding: 80px 10%; text-align: center; }
+.contact-form { margin: 30px 0; }
+.contact-form input {
+    padding: 12px;
+    width: 250px;
+    border-radius: 5px;
+    border: none;
+}
+.contact-form button {
+    padding: 12px 25px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.copyright { margin-top: 50px; opacity: 0.5; font-size: 0.9rem; }</style>
+
+    <nav class="navbar">
+        <div class="logo">CREATIVE<span>HUB</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Build Your Brand Story</h1>
+            <p>Innovative solutions for modern digital problems.</p>
+            <a href="#contact" class="btn-main">Start Project</a>
+        </div>
+    </header>
+
+    <section id="services" class="services">
+        <h2 class="section-title">Our Expertise</h2>
+        <div class="grid">
+            <div class="box"><h3>UI/UX Design</h3><p>Creating user-friendly interfaces.</p></div>
+            <div class="box"><h3>Development</h3><p>Fast and secure web coding.</p></div>
+            <div class="box"><h3>Marketing</h3><p>Growing your reach globally.</p></div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-container">
+            <h2>Who We Are</h2>
+            <p>We are a global agency with over 10 years of experience in crafting digital products that people love to use.</p>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <h2 class="section-title">Simple Pricing</h2>
+        <div class="price-grid">
+            <div class="price-card">
+                <h3>Basic</h3>
+                <div class="amount">$19<span>/mo</span></div>
+                <ul>
+                    <li>1 Website</li>
+                    <li>Basic Support</li>
+                </ul>
+                <button class="btn-price">Choose</button>
+            </div>
+            <div class="price-card popular">
+                <h3>Pro</h3>
+                <div class="amount">$49<span>/mo</span></div>
+                <ul>
+                    <li>5 Websites</li>
+                    <li>Priority Support</li>
+                </ul>
+                <button class="btn-price">Choose</button>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer">
+        <div class="footer-content">
+            <h2>Work With Us</h2>
+            <form class="contact-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Send</button>
+            </form>
+            <p class="copyright">&copy; 2025 CreativeHub | All Rights Reserved</p>
+        </div>
+    </footer>
+
+</body>
+</html>

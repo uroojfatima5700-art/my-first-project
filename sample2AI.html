@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduStream | Online Learning</title>
+    <style>
+        /* --- CSS Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary-color: #2e5bc7;
+            --secondary-color: #f4f7fe;
+            --text-dark: #333;
+            --text-light: #666;
+            --white: #ffffff;
+        }
+
+        body { line-height: 1.6; color: var(--text-dark); }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 10%;
+            background: var(--white);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary-color); }
+
+        .nav-links { list-style: none; display: flex; }
+
+        .nav-links li { margin-left: 2rem; }
+
+        .nav-links a { text-decoration: none; color: var(--text-dark); font-weight: 500; transition: 0.3s; }
+
+        .nav-links a:hover { color: var(--primary-color); }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background-image: url(img2.jpg);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+        }
+
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+
+        .btn {
+            padding: 12px 30px;
+            background: var(--white);
+            color: var(--primary-color);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .btn:hover { background: #e0e0e0; }
+
+        /* Features Section */
+        .section-padding { padding: 80px 10%; }
+
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+
+        .feature-card {
+            text-align: center;
+            padding: 30px;
+            background: var(--secondary-color);
+            border-radius: 10px;
+        }
+
+        /* Courses Section */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .course-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .course-card:hover { transform: translateY(-5px); }
+
+        .course-img { width: 100%; height: 200px; background: #ddd; object-fit: cover; }
+
+        .course-info { padding: 20px; }
+
+
+        /* Footer */
+        footer {
+            background: #222;
+            color: white;
+            padding: 40px 10%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">EduStream</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>Learn from the Best, Anywhere.</h1>
+        <p>Access over 5,000+ courses from industry experts.</p>
+        <a href="#courses" class="btn">Explore Courses</a>
+    </header>
+
+    <section class="section-padding">
+        <div class="features">
+            <div class="feature-card">
+                <h3>Expert Tutors</h3>
+                <p>Learn from professionals with years of industry experience.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Lifetime Access</h3>
+                <p>Purchase once and access the materials anytime, forever.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Certification</h3>
+                <p>Earn a recognized certificate upon completion of any course.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses" class="section-padding" style="background: #fff;">
+        <h2 style="text-align: center; margin-bottom: 40px;">Our Popular Courses</h2>
+        <div class="courses-grid">
+            <div class="course-card">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80" alt="Web Dev" class="course-img">
+                <div class="course-info">
+                    <h4>Web Development BootCamp</h4>
+                    <p>Master HTML, CSS, and JavaScript from scratch.</p>
+                </div>
+            </div>
+            <div class="course-card">
+                <img src="https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&w=400&q=80" alt="Data Science" class="course-img">
+                <div class="course-info">
+                    <h4>Data Science Essentials</h4>
+                    <p>Learn Python, SQL, and Machine Learning basics.</p>
+                </div>
+            </div>
+            <div class="course-card">
+                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=400&q=80" alt="Design" class="course-img">
+                <div class="course-info">
+                    <h4>UI/UX Design Masterclass</h4>
+                    <p>Design beautiful user interfaces with Figma.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 EduStream Learning Inc. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Login Page</title>
+    <style>
+        /* 1. Background Setup */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Using a high-quality stock image with a dark overlay */
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            
+            /* Center the content */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* 2. The Glassmorphism Container */
+        .login-container {
+            background: rgba(255, 255, 255, 0.1); /* Low opacity */
+            backdrop-filter: blur(15px);          /* Frosted glass effect */
+            -webkit-backdrop-filter: blur(15px);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            width: 100%;
+            max-width: 400px;
+            color: white;
+            text-align: center;
+        }
+
+        h2 { margin-bottom: 10px; font-weight: 600; }
+        p { margin-bottom: 30px; font-size: 0.9rem; opacity: 0.8; }
+
+        /* 3. Input Styling */
+        .input-group {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            outline: none;
+            box-sizing: border-box; /* Ensures padding doesn't affect width */
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #00d2ff;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* 4. Button Styling */
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: #00d2ff;
+            background: linear-gradient(to right, #3a7bd5, #00d2ff);
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s;
+            margin-top: 10px;
+        }
+
+        .login-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 210, 255, 0.4);
+        }
+
+        .forgot-pw {
+            display: block;
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: white;
+            text-decoration: none;
+            opacity: 0.7;
+        }
+
+        .forgot-pw:hover { opacity: 1; }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <form>
+            <h2>Member Login</h2>
+            <p>Access your dashboard</p>
+            
+            <div class="input-group">
+                <label for="email">EMAIL ADDRESS</label>
+                <input type="email" id="email" placeholder="e.g. name@company.com" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">PASSWORD</label>
+                <input type="password" id="password" placeholder="••••••••" required>
+            </div>
+
+            <button type="submit" class="login-btn">Sign In</button>
+            
+            <a href="#" class="forgot-pw">Forgot password?</a>
+        </form>
+    </div>
+
+</body>
+</html>

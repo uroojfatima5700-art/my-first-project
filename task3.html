@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sky Nexus Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css">
+  <style>
+         .header{
+            background-color:#ffffff;
+            padding-left: 40px;
+            padding-right: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            padding-bottom: 100px;
+         }
+         .logo-section{
+          display: flex;
+          gap: 10px;
+         }
+         .logo{
+          width:20px;
+          height:auto;
+         }
+         .menu{
+            display: flex;
+            list-style: none;
+            justify-content: space-between;
+            gap:50px;
+            text-align: center;
+            font-size: 20px;
+            padding-right:100px;
+            font-weight: 500;
+            margin-top:40px;
+            padding-left: 50px;
+         }
+         .h1{
+            color:#1f3c88;
+            height: auto;
+            text-align: left;
+            background-color:#ffffff;
+            font-size: 30px;
+            margin-top: 40px;
+            font-weight: bold;
+         }
+         .section2{
+          text-align: center;
+          padding-top: 100px;
+          color: #e5e7eb;
+          margin:20px;
+          font-weight:700px;
+         }
+         .btn2{
+          margin-top: 40px;
+         }
+         .hero-section{
+            background-image: url(sky3.jpeg);
+            background-position:center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            color:#ffffff;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 30px;
+            border: #ffffff solid;
+            height:750px;
+            padding-bottom: 150px;
+            text-align: center;
+         }
+         .para{
+            color:#e5e7eb;
+            font-size: 30px;
+            margin-top: 20px;
+          }
+          .icon1{
+            font-size:20px;
+            color: #000;
+            align-items:center;
+            display: flex;
+            justify-content: space-between;
+            gap:50px;
+            margin-top:30px;
+          }
+          .btn1{
+            align-items:center;
+            background-color:#4ed9e7;
+            border: #4ed9e7;
+            color:white;
+            font-size:20px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+          }
+          .heading{
+            text-align: center;
+            color: #000;
+            margin-top:40px;
+            margin-bottom: 25px;
+            font-size:20px
+          }
+          .h4{
+            font-size: 20px;
+            align-items: left;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #000;
+            padding-left: 15px;
+          }
+          .para2{
+            align-items: left;
+            color: #757575;
+            margin-bottom: 15px;
+            padding-left: 15px;
+          }
+          .h5{
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #000;
+            padding-left: 20px;
+          }
+          .para3{
+            color: #757575;
+            margin-bottom: 15px;
+            padding-left: 20px;
+          }
+          .h6{
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #000;
+            padding-left: 70px;
+          }
+          .para4{
+             color: #757575;
+            margin-bottom: 15px;
+            padding-left: 70px;
+          }
+          .h7{
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #000;
+            padding-left: 20px;
+          }
+          .para5{
+             color: #757575;
+            margin-bottom: 15px;
+            padding-left: 20px;
+          }
+          .icon2{
+            color: #4ed9e7;
+            padding-left: 50px;
+            padding-bottom: 20px;
+            font-size: 50px;
+          }
+          .icon3{
+            color: #4ed9e7;
+            padding-left: 50px;
+            padding-bottom: 20px;
+            font-size: 50px;
+          }
+          .icon4{
+            color: #4ed9e7;
+            padding-left:100px;
+            padding-bottom: 20px;
+            font-size: 50px;
+          }
+          .icon5{
+            color: #4ed9e7;
+            padding-left:100px;
+            padding-bottom: 20px;
+            font-size: 50px;
+          }
+          .section3{
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+          }
+          .btn3{
+            text-align: center;
+            color: #000;
+            padding-top: 20px;
+          }
+          .box1{
+            border: #e5e7eb;
+            padding-left:50px;
+          }
+          .picure{
+            width:500px;
+            border-radius: 15px;
+          }
+          .img{
+            width:500px;
+            height: auto;
+            border:none;
+            align-items:left;
+            margin-top: 100px;
+          }
+          .section4{
+            background-color:#ffffff;
+            border:#ffffff;
+            padding-left: 15px;
+            padding-right: 15px;
+          }
+          .heading1{
+            text-align:right;
+            margin-top: 0;
+            font-size: 35px;
+            font-weight: bold;
+            padding-right:400px;
+           }
+           .section5{
+            margin-bottom:50px;
+           }
+           .para6{
+            color: #757575;
+            text-align:right;
+            margin-bottom: 20px;
+            font-size: 20px;
+            padding-right:100px;
+           }
+           .para7{
+            color: #757575;
+            margin-top: 20px;
+            text-align:right;
+            font-size: 20px;
+            padding-right: 100px;
+           }
+           .list1{
+            list-style: none;
+            color:#000;
+            text-align:right;
+            padding-right:300px;
+            font-size:20px;
+            padding-left:100px;
+           }
+           .hello{
+            font-size: 20px;
+            color:#000;
+            padding-right:20px;
+           }
+           .btn-touch{
+            background-color: #4ed9e7;
+            color: #ffffff;
+            border:none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: right;
+            padding-bottom: 15px;
+            padding-top: 15px;
+            padding-left: 25px;
+            padding-right: 25px;
+           }
+           .touch{
+            text-align:right;
+            margin-right:450px;
+            padding-bottom: 50px;
+           }
+           .heading2{
+            text-align: center;
+            color: #000;
+            margin-top:120px;
+            margin-bottom:30px;
+            font-size:20px
+          }
+          .section6{
+            display:flex;
+            justify-content:center;
+            margin-top:50px;
+          }
+          .heading3{
+            text-align: center;
+            color: #000;
+            margin-top:120px;
+            margin-bottom:30px;
+            font-size:20px;
+          }
+          .list-style{
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            font-size: 40px;
+            padding: 50px;
+            gap:170px;
+            color: #000;
+          }
+          .list2{
+            color:#4ed9e7;
+          }
+          .list3{
+             color: palevioletred;
+          }
+          .list4{
+             color: plum;
+          }
+          .list5{
+              color: #4ed9e7;
+          }
+          .list6{
+              color:#f26200;
+          }
+          .list7{
+             color: skyblue;
+          }
+          .list8{
+              color: #757575;
+          }
+          .list9{
+              color: greenyellow;
+          }
+          .hello1{
+            color: #000;
+            font-size: 30px;
+          }
+          .list-style1{
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            font-size:40px;
+            padding: 50px;
+            gap:100px;
+            color: #000;
+          }
+          .btn4{
+            text-align: center;
+            color: #000;
+          }
+          .heading4{
+            text-align: center;
+            color: #000;
+            margin-top:120px;
+            margin-bottom:30px;
+            font-size:20px;
+          }
+          .ICT{
+            font-size: 30px;
+            color:yellow;
+            text-align: center;
+            margin-top: 40px;
+            gap:0;
+          }
+          .section7{
+            border:#e5e7eb solid;
+            margin-left:150px;
+            margin-right: 150px;
+            margin-top: 100px;
+            margin-bottom:150px;
+          }
+          .heading5{
+            text-align: center;
+            font-size:25px;
+            font-style: oblique;
+          }
+          .heading6{
+            text-align: center;
+            font-size:15px;
+            font-weight: bold;
+          }
+          .heading7{
+               text-align: center;
+               font-size:15px;
+               margin-bottom: 60px;
+          }
+          .mycolor{
+            color: #e5e7eb;
+            border: solid;
+          }
+          .mycolor1{
+            color: #e5e7eb;
+            background-color: #7b2cbf;
+            padding-left: 30px;
+            padding-right: 30px;
+          }
+          .pink{
+            font-size: 60px;
+            font-weight: bold;
+          }
+          .pink1{
+            font-size: 30px;
+          }
+          .pink2{
+          font-size: 40px;
+          padding-top: 40px;
+          font-weight: bold;
+          }
+          .pink3{
+          margin-bottom: 80px;
+          }
+          .pink4{
+          font-size: 40px;
+          padding-top: 30px;
+          }
+          .pink5{
+          font-size: 40px;
+          padding-top: 30px;
+          }
+          .pink6{
+            font-size:40px;
+            padding-top: 30px;
+          }
+          .section8{
+          background-color:#5e2c8c;
+          height:500px;
+          width: 100%;
+          margin-bottom: 40px;
+          }
+          .pink7{
+          font-size: 40px;
+          padding-top: 40px;
+          font-weight: bold;
+          color:#e5e7eb;
+          padding-left:150px;
+          }
+          .pink8{
+          font-size: 25px;
+          padding-bottom: 30px;
+          padding-top: 30px;
+          color: #000;
+          text-align: center;
+           }
+           .mycolor2{
+           color: #e5e7eb;
+            background-color:plum;
+            padding-left: 30px;
+            padding-right: 30px;
+           }
+           .mycolor3{
+            color: #e5e7eb;
+            border: solid;
+           }
+           .buttons{
+           text-align: center;
+            color: #000;
+            padding-top: 20px;
+            }
+
+         </style>
+
+</head>
+<body>
+  
+
+    <header class="header">
+        <div class="logo-section">
+          <img src="skynexus.png" class="logo">
+           <h1 class="h1">Sky Nexus</h1>
+        </div>
+        <div>
+            <ul class="menu">
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Services</li>
+                <li>Industries</li>
+                <li>Blog</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+            <div class="icon1">
+            <i class="fa-solid fa-magnifying-glass"></i>
+             <button class="btn1">Get in Touch</button>
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </div>
+        </div>
+     </header>
+     <section class="hero-section">
+      <div class="section2">
+        <h2 class="pink">Your Trusted IT Partner</h2>
+        <p class="pink1">Welcome to Sky Nexus! Empowering Australian businesses through innovation <br> and security, we are your trusted technology partner delivering end-to-end ICT  <br>solutions. From digital transformation and software development to business <br> intelligence, data analytics, and cybersecurity, we help organisations harness <br> data-driven insights to grow smarter, work safer, optimise operations, and <br> achieve more - guided by innovation, intelligence, and integrity.</p>
+         <div class="btn2">
+        <button type="button" class="btn mycolor1 btn-lg">Get Started</button>
+         <button type="button" class="btn mycolor btn-lg">Explore Services</button>
+         </div>
+      </div>
+     </section>
+         <section>
+          <div class="heading">
+          <h3 class="pink2">Our Services</h3>
+          <p class="pink3">Our team of industry expert professionals delivers cutting-edge solutions tailored to <br>meet the unique challenges of modern businesses across finance, healthcare, retail, and <br> more</p>
+          </div>
+        </section>
+        <section class="section3">
+          <div class="box1">
+            <div class="icon2">
+          <i class="fa-solid fa-shield"></i>
+            </div>
+          <h4 class="h4">Cybersecurity</h4>
+          <p class="para2">End-to-end cybersecurity <br> services including threat <br>detection, data protection, <br> and compliance with <br>Australian and international <br> standards.</p>
+          </div>
+          <div class="box1">
+          <div class="icon3">
+          <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <h5 class="h5">Business Intelligence</h5>
+          <p class="para3">BI platforms that enable <br> companies to monitor <br> market trends, analyze <br> customer behavior, and <br>stay competitive.</p>
+          </div>
+          <div class="box1">
+          <div class="icon4">
+          <i class="fa-solid fa-angle-left"></i>
+          <i class="fa-solid fa-angle-right"></i>
+          </div>
+          <h6 class="h6">Software Development</h6>
+          <p class="para4">Custom software solutions <br> that enhance productivity,<br> streamline operations,and<br>provide secure, scalable <br> applications</p>
+          </div>
+          <div class="box1">
+          <div class="icon5">
+          <i class="fa-solid fa-database"></i>
+          </div>
+            <h1 class="h7">Data Analytics</h1>
+            <p class="para5">Advanced analytics tools <br> leveraging AI and machine <br> learning to provide <br> actionable insights and <br> predictive capabilities.</p>
+          </div>
+         </section>
+         </section>
+         <div class="btn3">
+          <button class="btn btn-lg btn-info">View All Services</button>
+         </div>
+         <section class="section4">
+         <div class="picture">
+         <img src="skynexus1.png" class="img">
+         </div>
+         <div class="section5">
+          <h1 class="heading1">About Sky Nexus</h1>
+          <p class="para6">Sky Nexus, headquartered in Melbourne, is your trusted one-stop ICT <br> partner. Founded in 2024, we empower Australian businesses with <br> innovative, secure, and intelligent technology solutions - from <br> software development and cloud computing to IT consulting and <br> cybersecurity. Guided by our values of Excellence, Innovation, and <br> Integrity, we help organisations operate smarter, safer, and more <br>efficiently in the digital age.          </p>
+        <p class="para7">We're committed to delivering customized digital solutions that <br>address the unique challenges of modern businesses across various <br> industries including healthcare, finance, education, retail, and <br>manufacturing.</p> 
+        <ul class="list1">
+        <li class="hello"><i class="fa-regular fa-circle-check"></i>Experienced team of IT professionals</li>
+        <li class="hello"><i class="fa-regular fa-circle-check"></i>AI and ML-powered solutions</li>
+        <li class="hello"><i class="fa-regular fa-circle-check"></i>Tailored solutions for your business needs</li>
+        <li class="hello"><i class="fa-regular fa-circle-check"></i>Focus on security and reliability</li>
+        </ul>
+        </div>
+        <div class="touch">
+        <button class="btn-touch">Learn More About Us</button>
+        </div>
+      </section>
+      <section>
+        <div class="heading2">
+          <h1 class="pink4">Innovation & Technology</h1>
+          <p>At Sky Nexus, we’re redefining what’s possible through the power of artificial <br> intelligence, machine learning, and smart automation. Our solutions integrate seamlessly <br> across software development, cloud infrastructure, data analytics, and cybersecurity, <br> enabling organisations to innovate faster, operate smarter, and stay secure in a <br> connected world. From predictive analytics and AI-driven insights to next-generation <br> digital transformation and intelligent system integration, we empower businesses to lead <br> with clarity, agility, and confidence in the digital era.</p>
+        </div>
+      </section>
+      <section class="section6">
+        <div class="box1">
+        <div class="icon2">
+          <i class="fa-solid fa-brain"></i>
+        </div>
+          <h1 class="h4">AI & Machine Learning</h1>
+        <p class="para2">Advanced capabilities in predictive <br> modeling, big data processing, and <br> natural language processing.</p>
+        </div>
+        <div class="box2">
+        <div class="icon3">
+          <i class="fa-solid fa-database"></i>
+        </div>
+          <h1 class="h5">Real-Time Analytics</h1>
+          <p class="para3">Customizable dashboards presenting <br> data and KPIs in real-time for informed <br> decision-making. </p>
+        </div>
+        <div class="box3">
+        <div class="icon4">
+          <i class="fa-solid fa-lock"></i>
+        </div>
+          <h1 class="h6">Data Privacy</h1>
+          <p class="para4">Commitment to responsible data use <br> and compliance with Australian data <br> protection standards.</p>
+        </div>
+        </section>
+        <section>
+          <div class="heading3">
+            <h1 class="pink5">Industries We Serve</h1>
+            <p>We proudly serve a diverse range of industries - from small businesses and startups to <br>large enterprises, government agencies, and not-for-profit organizations. Our tailored <br> approach ensures that every client receives personalized, efficient, and results-driven <br> solutions aligned with their goals, resources, and compliance needs. Whether it’s <br> enhancing operational efficiency for SMEs, strengthening cybersecurity for government <br> entities, streamlining systems for NFPs, or driving digital transformation for enterprise <br> clients, we adapt our expertise to each sector’s unique challenges - delivering <br> technology that empowers growth, innovation, and long-term success.Healthcare Finance Education</p>
+          </div>
+        </section>
+        <section>
+        <ul class="list-style">
+        <li class="list2">
+        <i class="fa-solid fa-box-archive"></i>
+        <h1 class="hello1">Healthcare</h1>
+        </li>
+        <li class="list3">
+        <i class="fa-regular fa-dollar-sign"></i>
+        <h1 class="hello1">Finance</h1>  
+        </li>
+        <li class="list4">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <h1 class="hello1">Education</h1>
+        </li>
+        <li class="list5">
+        <i class="fa-solid fa-box-archive"></i>
+        <h1 class="hello1">Retail</h1>
+        </li>
+        </ul>
+        <ul class="list-style1">
+          <li class="list6">
+             <i class="fa-solid fa-industry"></i>
+          <h1 class="hello1">Manufacturing</h1>
+          </li>
+          <li class="list7">
+          <i class="fa-solid fa-microchip"></i>
+            <h1 class="hello1">Technology</h1>
+          </li>
+          <li class="list8">
+            <i class="fa-regular fa-building"></i>
+            <h1 class="hello1">Government</h1>
+          </li>
+          <li class="list9">
+            <i class="fa-solid fa-leaf"></i>
+            <h1 class="hello1">Sustainability</h1>
+          </li>
+        </ul>
+        </section>
+        <div class="btn4">
+          <button class="btn btn-info btn-lg">Explore All Industries</button>
+        </div>
+        <section class="heading4">
+          <h1 class="pink6">What Our Clients Says</h1>
+          <p>With a strong commitment to excellence, integrity, and innovation, Sky Nexus has <br> earned the trust of businesses, not-for-profit organisations, and government partners <br> across Australia. Our clients consistently highlight our personalised approach, technical <br> expertise, and dedication to delivering real results. From developing intelligent software <br> solutions and secure IT infrastructures to driving full-scale digital transformation, our <br> team ensures every project is executed with precision and transparency. Clients value <br> our ability to listen, adapt, and provide scalable solutions that align with their vision - <br> helping them save time, reduce costs, and enhance operational performance. At Sky <br>Nexus, client satisfaction is more than a goal - it’s a promise. Each success story reflects <br> our unwavering commitment to building long-term partnerships grounded in trust, <br> collaboration, and technological excellence.</p>
+        </section>
+      <section class="section7">
+        <div class="ICT">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+
+      </div>
+      <p class="heading5">"I highly recommend Sky Nexus to anyone seeking a reliable and innovative <br> partner. Their team truly deliver on their promises and go above and beyond <br> to ensure client satisfaction.</p>
+      <p class="heading6">Satisfied Client</p> 
+      <p class="heading7">Yellow Pages Review</p> 
+    </section>
+    <section class="section8">
+    <h1 class="pink7">Ready to Transform Your Business with Data-Driven Innovation?</h1>
+    <p class="pink8">Contact us today to discuss how Sky Nexus can help your business <br> thrive with our tailored IT solutions.</p>
+    <div class="buttons">
+    <button type="button" class="btn mycolor2 btn-lg">Get in Touch</button>
+    <button type="button" class="btn mycolor3 btn-lg">Request a Quote</button>
+    </div>
+    </section>
+</body>
+</htm>

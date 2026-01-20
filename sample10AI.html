@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate 10-Section Single Page</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --accent: #00d2ff;
+            --secondary: #3a7bd5;
+            --dark-bg: #0f172a;
+            --text-light: #f8fafc;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
+        body { background: var(--dark-bg); color: var(--text-light); scroll-behavior: smooth; overflow-x: hidden; }
+
+        /* --- 1. NAVIGATION --- */
+        nav {
+            position: fixed; top: 0; width: 100%; padding: 20px 5%;
+            display: flex; justify-content: space-between; align-items: center;
+            background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(15px); z-index: 1000;
+        }
+        .nav-links { display: flex; gap: 20px; list-style: none; }
+        .nav-links a { color: white; text-decoration: none; font-size: 0.9rem; opacity: 0.7; transition: 0.3s; }
+        .nav-links a:hover { opacity: 1; color: var(--accent); }
+
+        /* --- GLOBAL SECTION STYLE --- */
+        section { padding: 100px 10%; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+        h2 { font-size: 3rem; margin-bottom: 40px; text-transform: uppercase; letter-spacing: 2px; }
+
+        /* --- 2. HERO SECTION --- */
+        #home { 
+            background: radial-gradient(circle at top right, var(--secondary), transparent), 
+                        radial-gradient(circle at bottom left, #7b1fa2, transparent);
+            text-align: center; align-items: center;
+        }
+        #home h1 { font-size: 5rem; line-height: 1; margin-bottom: 20px; }
+        .badge { background: var(--glass); padding: 8px 20px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.2); font-size: 0.8rem; margin-bottom: 20px; }
+
+        /* --- 3. SERVICES --- */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .card { 
+            background: var(--glass); padding: 40px; border-radius: 20px; 
+            border: 1px solid rgba(255,255,255,0.1); transition: 0.4s; 
+        }
+        .card:hover { background: rgba(255,255,255,0.1); transform: translateY(-10px); }
+
+        /* --- 4. ABOUT (Split Layout) --- */
+        .about-flex { display: flex; gap: 50px; align-items: center; flex-wrap: wrap; }
+        .about-text { flex: 1; min-width: 300px; }
+        .about-img { flex: 1; min-width: 300px; height: 400px; background: var(--glass); border-radius: 30px; }
+
+        /* --- 5. STATS --- */
+        #stats { background: #1e293b; min-height: auto; padding: 60px 10%; }
+        .stats-grid { display: flex; justify-content: space-around; text-align: center; flex-wrap: wrap; gap: 30px; }
+        .stat-item h3 { font-size: 3rem; color: var(--accent); }
+
+        /* --- 6. PORTFOLIO --- */
+        .work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        .work-item { height: 300px; background: #334155; border-radius: 15px; overflow: hidden; position: relative; }
+        .work-item:hover .overlay { opacity: 1; }
+        .overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.7); display: flex; align-items: center; justify-content: center; opacity: 0; transition: 0.3s; }
+
+        /* --- 7. TESTIMONIALS --- */
+        .test-card { font-style: italic; border-left: 5px solid var(--accent); padding-left: 20px; }
+
+        /* --- 8. PRICING --- */
+        .price-box { border: 2px solid var(--accent); padding: 40px; text-align: center; border-radius: 20px; }
+
+        /* --- 9. FAQ (Accordion Style) --- */
+        .faq-item { background: var(--glass); margin-bottom: 10px; padding: 20px; border-radius: 10px; cursor: pointer; }
+
+        /* --- 10. CONTACT --- */
+        form { display: grid; gap: 15px; max-width: 600px; }
+        input, textarea { background: var(--glass); border: 1px solid rgba(255,255,255,0.2); padding: 15px; color: white; border-radius: 10px; }
+        .btn { padding: 15px 40px; background: linear-gradient(to right, var(--accent), var(--secondary)); border: none; color: white; border-radius: 10px; cursor: pointer; font-weight: bold; width: fit-content; }
+
+        footer { padding: 40px; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 3rem !important; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo"><strong>GLOW</strong>UI</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Story</a></li>
+            <li><a href="#services">Tech</a></li>
+            <li><a href="#portfolio">Work</a></li>
+            <li><a href="#contact">Join</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <div class="badge">Innovation at its peak</div>
+        <h1>Future of Web <br><span style="color: var(--accent);">Development</span></h1>
+        <p>Aapki pehchan, hamara design.</p>
+        <a href="#contact" class="btn" style="margin-top: 30px;">Start Project</a>
+    </section>
+
+    <section id="about">
+        <div class="about-flex">
+            <div class="about-text">
+                <h2>Our Story</h2>
+                <p>Humne 2010 mein shuru kiya aur aaj hum hazaron businesses ko digital bana chuke hain. Hamari coding aur aapka idea mil kar kamal karte hain.</p>
+            </div>
+            <div class="about-img" style="background:url(laptop4.jpg) center/cover;"></div>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>Tech Stack</h2>
+        <div class="grid">
+            <div class="card"><i class="fas fa-mobile-alt"></i><h3>App Design</h3><p>iOS aur Android platforms ke liye.</p></div>
+            <div class="card"><i class="fas fa-database"></i><h3>Cloud Ops</h3><p>Safe aur secure data hosting.</p></div>
+            <div class="card"><i class="fas fa-brain"></i><h3>AI Solutions</h3><p>Smart automation tools.</p></div>
+        </div>
+    </section>
+
+    <section id="stats">
+        <div class="stats-grid">
+            <div class="stat-item"><h3>500+</h3><p>Projects</p></div>
+            <div class="stat-item"><h3>150+</h3><p>Clients</p></div>
+            <div class="stat-item"><h3>20+</h3><p>Awards</p></div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h2>Selected Work</h2>
+        <div class="work-grid">
+            <div class="work-item">
+         <img src="laptop4.jpg" width="100%">
+                <div class="overlay">Digital Dashboard</div>
+            </div>
+            <div class="work-item">
+                <img src="laptop6.jpg" width="100%">
+                <div class="overlay">E-Commerce App</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2>Client Voice</h2>
+        <div class="test-card">
+            <p>"Inka kaam waqayi lajawab hai. Design aur performance ka behtareen combo!"</p>
+            <p><strong>- Ahmed Raza</strong></p>
+        </div>
+    </section>
+
+    <section id="pricing">
+        <div class="price-box">
+            <h3>Enterprise Plan</h3>
+            <h1 style="font-size: 4rem;">$299<small>/mo</small></h1>
+            <p>Unlimited Support | Custom Code | Cloud Hosting</p>
+            <button class="btn" style="margin-top: 20px;">Get Started</button>
+        </div>
+    </section>
+
+    <section id="faq">
+        <h2>Questions?</h2>
+        <div class="faq-item"><strong>Do you provide maintenance?</strong><br>Yes, we offer 24/7 support.</div>
+        <div class="faq-item"><strong>What is the typical timeline?</strong><br>Usually 2 weeks for most projects.</div>
+    </section>
+
+    <section id="contact">
+        <h2>Hire Us</h2>
+        <form id="mainForm">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <textarea rows="4" placeholder="Brief about your project"></textarea>
+            <button type="submit" class="btn">Send Request</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2026 GlowUI Studio. All rights reserved.</p>
+        <div style="margin-top: 10px; font-size: 1.5rem; gap: 20px; display: flex; justify-content: center;">
+            <i class="fab fa-twitter"></i> <i class="fab fa-github"></i> <i class="fab fa-linkedin"></i>
+        </div>
+    </footer>
+
+    <script>
+        // Form Handling
+        document.getElementById('mainForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            this.innerHTML = "<h3>Shukriya! Hum jald hi raabta karenge.</h3>";
+        });
+
+        // Scroll Animation (Simple Observer)
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = 0;
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = '0.8s ease-out';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
