@@ -3,12 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Quiz</title>
+    <title>Outstanding Quiz App</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             padding: 20px;
+            margin: 0;
+            min-height: 100vh;
+        }
+        #start-screen {
+            text-align: center;
+            margin-top: 100px;
+        }
+        #start-screen h1 {
+            color: #fff;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        #start-btn {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #start-btn:hover {
+            background-color: #ff5252;
         }
         .quiz-container {
             max-width: 600px;
@@ -21,6 +44,27 @@
         h1 {
             text-align: center;
             color: #333;
+        }
+        #timer {
+            text-align: center;
+            font-size: 20px;
+            color: #ff6b6b;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        #progress-container {
+            width: 100%;
+            background-color: #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        #progress-bar {
+            height: 10px;
+            background: linear-gradient(to right, #4CAF50, #45a049);
+            border-radius: 5px;
+            width: 0%;
+            transition: width 0.3s ease;
         }
         .question {
             margin-bottom: 20px;
@@ -64,8 +108,16 @@
     </style>
 </head>
 <body>
-    <div class="quiz-container">
-        <h1>General Knowledge Quiz</h1>
+    <div id="start-screen">
+        <h1>Unique Quiz App</h1>
+        <button id="start-btn">Start Quiz</button>
+    </div>
+    <div class="quiz-container" style="display: none;">
+        <h1>Outstanding Quiz App</h1>
+        <div id="timer">Time left: <span id="time"></span></div>
+        <div id="progress-container">
+            <div id="progress-bar"></div>
+        </div>
         <div id="quiz">
             <div id="question-container">
                 <!-- Question will be loaded here -->
@@ -99,11 +151,115 @@
                 question: "Who painted the Mona Lisa?",
                 options: ["Vincent van Gogh", "Leonardo da Vinci", "Pablo Picasso", "Michelangelo"],
                 answer: "Leonardo da Vinci"
+            },
+            {
+                question: "What is the color of the sky on a clear day?",
+                options: ["Green", "Blue", "Red", "Yellow"],
+                answer: "Blue"
+            },
+            {
+                question: "How many continents are there?",
+                options: ["5", "6", "7", "8"],
+                answer: "7"
+            },
+            {
+                question: "What is H2O commonly known as?",
+                options: ["Oxygen", "Hydrogen", "Water", "Carbon dioxide"],
+                answer: "Water"
+            },
+            {
+                question: "Who wrote Romeo and Juliet?",
+                options: ["Charles Dickens", "William Shakespeare", "Jane Austen", "Mark Twain"],
+                answer: "William Shakespeare"
+            },
+            {
+                question: "What is the square root of 16?",
+                options: ["2", "4", "6", "8"],
+                answer: "4"
+            },
+            {
+                question: "What is the capital of France?",
+                options: ["London", "Berlin", "Paris", "Rome"],
+                answer: "Paris"
+            },
+            {
+                question: "Which animal is known as the King of the Jungle?",
+                options: ["Tiger", "Elephant", "Lion", "Giraffe"],
+                answer: "Lion"
+            },
+            {
+                question: "What is 10 divided by 2?",
+                options: ["3", "4", "5", "6"],
+                answer: "5"
+            },
+            {
+                question: "Who discovered the law of gravity?",
+                options: ["Einstein", "Newton", "Galileo", "Tesla"],
+                answer: "Newton"
+            },
+            {
+                question: "What is the boiling point of water in Celsius?",
+                options: ["50°C", "75°C", "100°C", "125°C"],
+                answer: "100°C"
+            },
+            {
+                question: "Which planet is closest to the Sun?",
+                options: ["Venus", "Earth", "Mercury", "Mars"],
+                answer: "Mercury"
+            },
+            {
+                question: "What is the largest ocean on Earth?",
+                options: ["Atlantic", "Indian", "Arctic", "Pacific"],
+                answer: "Pacific"
+            },
+            {
+                question: "Who painted The Starry Night?",
+                options: ["Picasso", "Van Gogh", "Monet", "Dali"],
+                answer: "Van Gogh"
+            },
+            {
+                question: "What is 7 times 8?",
+                options: ["48", "54", "56", "62"],
+                answer: "56"
+            },
+            {
+                question: "What is the capital of Japan?",
+                options: ["Seoul", "Beijing", "Tokyo", "Bangkok"],
+                answer: "Tokyo"
+            },
+            {
+                question: "Which gas do plants absorb from the atmosphere?",
+                options: ["Oxygen", "Nitrogen", "Carbon dioxide", "Hydrogen"],
+                answer: "Carbon dioxide"
             }
         ];
 
+        function startQuiz() {
+            document.getElementById('start-screen').style.display = 'none';
+            document.getElementById('quiz-container').style.display = 'block';
+            timeLeft = 600;
+            document.getElementById('time').textContent = '10:00';
+            loadQuestion();
+            startTimer();
+        }
+
+        function startTimer() {
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                let minutes = Math.floor(timeLeft / 60);
+                let seconds = timeLeft % 60;
+                document.getElementById('time').textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    submitQuiz();
+                }
+            }, 1000);
+        }
+
         let currentQuestionIndex = 0;
         let userAnswers = [];
+        let timeLeft = 600;
+        let timerInterval;
 
         function loadQuestion() {
             const questionContainer = document.getElementById('question-container');
@@ -141,6 +297,7 @@
         }
 
         function submitQuiz() {
+            clearInterval(timerInterval);
             let score = 0;
             questions.forEach((q, index) => {
                 if (userAnswers[index] === q.answer) {
@@ -155,7 +312,9 @@
         }
 
         // Load the first question on page load
-        window.onload = loadQuestion;
+        window.onload = function() {
+            document.getElementById('start-btn').addEventListener('click', startQuiz);
+        };
     </script>
 </body>
 </html>
